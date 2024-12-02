@@ -1,0 +1,19 @@
+@import "mixins";
+@import "variables";
+
+.personal-menu {
+  margin-right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  @include flexRowAround;
+
+  &:hover {
+    background: $person-hover;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+  }
+}

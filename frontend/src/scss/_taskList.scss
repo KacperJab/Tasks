@@ -1,0 +1,9 @@
+@import "variables";
+
+.task-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}

@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    password: postgres
+    url: jdbc:tc:postgresql:14.4://localhost:5432/kacpersparkbit?currentSchema=test
+    username: kacpersparkbit
+    name: kacpersparkbit
+  flyway:
+    default-schema: test
+    clean-disabled: false
+    clean-on-validation-error: true
+
+
+keycloak:
+  auth-server-url: https://junior-academy-keycloak.sparkbit.pl/auth
+  realm: task-list-kacper-jablonski
+  resource:  task-list
+  public-client: true
+  ssl-required: external
+  confidential-port: 0
+  bearer-only: true
+  use-resource-role-mappings: true
+  verify-token-audience: true

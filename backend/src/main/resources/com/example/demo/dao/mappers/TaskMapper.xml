@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.mappers.TaskMapper">
+    <insert id="insertTask"
+            parameterType="com.example.demo.domain.Task">
+        INSERT INTO tasks (id, userid, title, description, important, done, created_on)
+        VALUES (#{task.id}, #{task.userId}, #{task.title}, #{task.description}, #{task.important}, #{task.done}, #{task.createdOn})
+    </insert>
+    <select id="getTask"
+            parameterType="String"
+            resultType="com.example.demo.domain.Task">
+        SELECT id, userid, title, description, important, done, created_on
+        FROM tasks
+        WHERE id = #{taskId}
+    </select>
+    <select id="getAllTasks"
+            parameterType="String"
+            resultType="com.example.demo.domain.Task">
+        SELECT id, userid, title, description, important, done, created_on
+        FROM tasks
+        WHERE userid = #{userId}
+    </select>
+    <select id="filterTasks"
+            parameterType="Boolean"
+            resultType="com.example.demo.domain.Task">
+        SELECT id, userid, title, description, important, done, created_on
+        FROM tasks
+        WHERE (important = #{important} OR done = #{done}) OR
+              (important = #{important}) OR
+              (done = #{done})
+    </select>
+    <select id="filterImportantAndOpenTasks"
+            parameterType="String"
+            resultType="com.example.demo.domain.Task">
+        SELECT id, userid, title, description, important, done, created_on
+        FROM tasks
+        WHERE important = true AND done = false AND userid = #{userID}
+    </select>
+    <select id="filterImportantTasks"
+            parameterType="String"
+            resultType="com.example.demo.domain.Task">
+        SELECT id, userid, title, description, important, done, created_on
+        FROM tasks
+        WHERE important = true AND userid = #{userID}
+    </select>
+    <select id="filterOpenTasks"
+            parameterType="String"
+            resultType="com.example.demo.domain.Task">
+        SELECT id, userid, title, description, important, done, created_on
+        FROM tasks
+        WHERE done = false AND userid = #{userID}
+    </select>
+    <update id="updateTask"
+            parameterType="com.example.demo.domain.Task">
+        UPDATE tasks
+        SET title = #{task.title}, description = #{task.description}, important = #{task.important}, done = #{task.done}
+        WHERE id = #{task.id}
+    </update>
+    <delete id="deleteTask">
+        DELETE FROM tasks
+        WHERE id = #{taskId}
+    </delete>
+    <select id="openTasksCount"
+            parameterType="String"
+            resultType="Int">
+        SELECT count(id)
+        FROM tasks
+        WHERE userid = #{userId} AND done = FALSE
+    </select>
+    <select id="openImportantTasksCount"
+            parameterType="String"
+            resultType="Int">
+        SELECT count(id)
+        FROM tasks
+        WHERE userid = #{userId} AND done = FALSE AND important = TRUE
+    </select>
+    <select id="totalTasksCount"
+            parameterType="String"
+            resultType="Int">
+        SELECT count(id)
+        FROM tasks
+        WHERE userid = #{userId}
+    </select>
+    <select id="getUserTask"
+            parameterType="String"
+            resultType="com.example.demo.domain.Task">
+        SELECT id, userid, title, description, important, done, created_on
+        FROM tasks
+        WHERE id = #{taskId} AND userid = #{userId}
+    </select>
+</mapper>

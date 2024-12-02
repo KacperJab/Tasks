@@ -1,0 +1,18 @@
+export enum ActionTypes {
+    ADD_TASK = "ADD_TASK",
+    GET_TASKS = "GET_TASKS",
+    SET_FILTERS = "SET_FILTERS",
+    UPDATE_TASK = "UPDATE_TASK",
+    DELETE_TASK = "DELETE_TASK",
+    GET_USERS = "GET_USERS",
+    GET_USER_TASKS = "GET_USER_TASKS",
+    CLEAN_STATE = "CLEAN_STATE",
+    CLEAN_TASKS = "CLEAN_TASKS"
+}
+
+export enum VisibilityFilters {
+    ALL= "ALL",
+    IMPORTANT= "IMPORTANT",
+    OPEN= "OPEN",
+    OPEN_IMPORTANT= "OPEN_IMPORTANT"
+}

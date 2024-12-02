@@ -1,0 +1,36 @@
+@import "variables";
+
+.personal-menu-box {
+
+  width: 240px;
+  height: 97px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  font-family: $font-roboto;
+  box-shadow: $box-shadow-menu;
+  border-radius: 4px;
+  position: absolute;
+  top: 58px;
+  right: 30px;
+  background: $personal-menu-background;
+
+  &__name {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__logout {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+  }
+}

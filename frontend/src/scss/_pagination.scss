@@ -1,0 +1,71 @@
+@import "variables";
+
+.pagination{
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.75);
+    height: 56px;
+    padding-right: 10px;
+  }
+
+  &__first-button {
+    height: 12px;
+
+    &__active {
+      filter: brightness(0) saturate(100%);
+    }
+
+    &__disabled {
+      filter: brightness(0%) saturate(100%) invert(83%) sepia(0%) saturate(8%) hue-rotate(138deg) brightness(3%) contrast(87%);
+    }
+  }
+
+  &__previous-button {
+    height: 12px;
+
+    &__active {
+      filter: brightness(0) saturate(100%);
+    }
+
+    &__disabled {
+      filter: brightness(0);
+    }
+  }
+
+  &__next-button {
+    height: 12px;
+
+    &__active {
+      filter: brightness(0) saturate(100%);
+    }
+
+    &__disabled {
+      filter: $pagination-buttons-filter
+    }
+  }
+
+  &__last-button {
+    height: 12px;
+
+    &__active {
+      filter: brightness(0) saturate(100%);
+    }
+
+    &__disabled {
+      filter: $pagination-buttons-filter
+    }
+  }
+}

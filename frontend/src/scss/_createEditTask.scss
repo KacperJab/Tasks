@@ -1,0 +1,128 @@
+@import "variables";
+
+.create-edit-task {
+
+  height: fit-content;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 16px;
+  font-family: $font-roboto;
+  box-shadow: $box-shadow-default;
+  border-radius: $box-border-radius;
+  border: none;
+  background: white;
+  align-self: center;
+
+  @media screen and (max-width: $medium-screen) {
+    width: fit-content;
+  }
+
+  &__header {
+    font-size: $font-size-large;
+    font-weight: map-get($font-weights, "medium");
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__title-label {
+    font-size: $font-size-small;
+    color: $placeholder-color;
+    background: white;
+    width: 25px;
+    position: relative;
+    top: 29px;
+    left: 15px;
+  }
+
+  &__title {
+    height: 54px;
+    border: solid darkgrey;
+    border-radius: 4px;
+    padding-left: 20px;
+    background-color: white;
+    font-size: $font-size-medium;
+    font-family: $font-roboto;
+
+    &:focus , &:active {
+      background: transparent;
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
+      font-family: $font-roboto;
+      font-size: $font-size-medium;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    height: 104px;
+    border: solid darkgrey;
+    border-radius: 4px;
+    font-size: $font-size-medium;
+    padding-left: 20px;
+    padding-top: 15px;
+    font-family: $font-roboto;
+    overflow-y: auto;
+    resize: none;
+
+    &::placeholder {
+      color: $placeholder-color;
+      font-family: $font-roboto;
+      font-size: $font-size-medium;
+    }
+  }
+
+  &__body {
+    font-size: $font-size-button;
+    font-weight: map-get($font-weights, "regular");
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  &__cancel, &__create {
+    font-size: $font-size-button;
+    font-weight: map-get($font-weights, "medium");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: $main-orange;
+    padding: 10px 8px;
+    width: 76px;
+    height: 36px;
+    border-radius: 4px;
+    background: none;
+    border: none;
+
+    &:hover {
+      box-shadow: $button-hover-shadow;
+    }
+
+    &:active {
+      transform: $button-hover-scale;
+      box-shadow: $button-hover-shadow;
+    }
+  }
+
+  &__create {
+    color: white;
+    background: $main-orange;
+
+  }
+}

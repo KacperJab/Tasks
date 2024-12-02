@@ -1,0 +1,85 @@
+@import "variables";
+
+.delete-task {
+
+  height: 146px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 8px 8px 24px;
+  font-family: $font-roboto;
+  box-shadow: $box-shadow-default;
+  border-radius: $box-border-radius;
+  border: none;
+  background: white;
+
+  &__header {
+    font-size: 24px;
+    font-weight: map-get($font-weights, "medium");
+  }
+
+  &__are-yo-sure {
+    font-size: 14px;
+    font-weight: map-get($font-weights, "regular");
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  &__cancel {
+    font-size: 14px;
+    font-weight: map-get($font-weights, "medium");
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: $main-orange;
+    padding: 10px 8px;
+    width: 76px;
+    height: 36px;
+    border-radius: 4px;
+    background: none;
+    border: none;
+
+    &:hover {
+      box-shadow: $button-hover-shadow;
+    }
+
+    &:active {
+      transform: $button-hover-scale;
+      box-shadow: $button-hover-shadow;
+    }
+  }
+
+  &__delete {
+    font-size: 14px;
+    font-weight: map-get($font-weights, "medium");
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 8px;
+    width: 76px;
+    height: 36px;
+    border-radius: 4px;
+    background: $delete-button-color;
+    border: none;
+
+    &:hover {
+      box-shadow: $button-hover-shadow;
+    }
+
+    &:active {
+      transform: $button-hover-scale;
+      box-shadow: $button-hover-shadow;
+    }
+  }
+}

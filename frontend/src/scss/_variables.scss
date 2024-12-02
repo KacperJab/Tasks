@@ -1,0 +1,41 @@
+$toast-font-color: white;
+$toast-background-success: #2E7D32;
+$toast-background-error: #D32F2F;
+$toast-box-shadow:  0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.2);
+$toast-border-radius: 4px;
+$button-hover: rgba(255, 255, 255, 0.1);
+$main-orange: #FF5E00;
+$person-hover: #FFFFFF14;
+$background-img: url("src/images/background.svg");
+$font-roboto: "Roboto", sans-serif;
+$box-border-radius: 4px;
+$task-box-margin: 0 16px 16px 16px;
+$task-headline-margin: 0 30px 16px 16px;
+$box-shadow-default: 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.2);
+$box-shadow-menu: 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.2);
+$personal-menu-background: white;
+$task-letter-spacing: 0.15px;
+$toggle-width: 34px;
+$toggle-height: 14px;
+$toggle-checked-color: #FF5E00;
+$toggle-slider-color: rgba(255, 94, 0, 0.38);
+$orange-filter-hover: invert(36%) sepia(91%) saturate(2085%) hue-rotate(3deg) brightness(105%) contrast(104%);
+$toggle-slider-background: rgba(33, 33, 33, 0.08);
+$toggle-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.2);
+$button-hover-shadow: 3px 2px 17px 1px rgba(0, 0, 0, 0.1);
+$button-hover-scale: scale(0.98);
+$delete-button-color: #D22F2F;
+$cancel-button-color: white;
+$table-row-background: rgba(241, 241, 241, 0.75);
+$pagination-buttons-filter: brightness(0) saturate(100%) invert(83%) sepia(0%) saturate(8%) hue-rotate(138deg) brightness(93%) contrast(87%);
+$medium-screen: 700px;
+$placeholder-color: rgba(0, 0, 0, 0.5);
+$font-size-medium: 16px;
+$font-size-large: 24px;
+$font-size-small: 12px;
+$font-size-button: 14px;
+$font-weights: (
+        "regular": 400,
+        "medium": 500,
+        "heavy": 600
+)

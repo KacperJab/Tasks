@@ -1,0 +1,13 @@
+@import "variables";
+
+.App {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 68px 1fr 68px;
+  background: url("../images/background.svg") 0 150px no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+  font-family: $font-roboto;
+  font-style: normal;
+  font-weight: map-get($font-weights, "regular");
+}

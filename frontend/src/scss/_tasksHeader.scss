@@ -1,0 +1,27 @@
+@import "variables";
+
+.tasks-header {
+  position: sticky;
+  top: 68px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+
+
+  &__title {
+    font-family: $font-roboto;
+    font-weight: map-get($font-weights, "regular");
+    font-size: 48px;
+  }
+
+  &__toggles {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 180px;
+  }
+}

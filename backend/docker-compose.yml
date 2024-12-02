@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  API:
+    image: 'taskapp:dev'
+    build: ..
+    ports:
+      - "8080:8080"
+    depends_on:
+      - Database
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://Database:5432/kacpersparkbit?currentSchema=test
+      - SPRING_DATASOURCE_USERNAME=kacpersparkbit
+      - SPRING_DATASOURCE_PASSWORD=postgres
+  Database:
+    container_name: Database
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=kacpersparkbit
+      - POSTGRES_PASSWORD=postgres

@@ -1,0 +1,37 @@
+@import "variables";
+
+.Toastify__toast-container--bottom-right {
+  bottom: 5em !important;
+  right: 1em;
+}
+
+.Toastify__toast--error {
+  color: $toast-font-color !important;
+  border-radius: $toast-border-radius !important;
+  background: $toast-background-error !important;
+  box-shadow:$toast-box-shadow !important;
+}
+.Toastify__toast--success {
+  color: $toast-font-color !important;
+  border-radius: $toast-border-radius !important;
+  background: $toast-background-success !important;
+  box-shadow:$toast-box-shadow !important;
+}
+
+.Toastify__toast--success::before {
+  content: url("../images/success.svg");
+  position: relative;
+  align-self: center;
+  left: 20px;
+}
+
+.Toastify__toast--error::before {
+  content: url("../images/error.svg");
+  position: relative;
+  align-self: center;
+  left: 20px;
+}
+
+.Toastify svg {
+  display: none;
+}

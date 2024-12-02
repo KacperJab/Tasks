@@ -1,0 +1,34 @@
+@import "variables";
+
+.user-table {
+  font-family: $font-roboto;
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+
+  &__header {
+
+    &__name {
+      text-align: left;
+      font-size: 16px;
+      font-weight: map-get($font-weights, "heavy");
+    }
+
+    &__rest {
+      text-align: right;
+      font-size: 16px;
+      font-weight: map-get($font-weights, "heavy");
+    }
+  }
+}
+
+td, th {
+  border: 1px transparent;
+  font-family: $font-roboto;
+  padding: 15px;
+  justify-content: center;
+}
+
+tr:nth-child(even) {
+  background-color: $table-row-background;
+}
